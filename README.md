@@ -1,4 +1,4 @@
-This is will get an error when building for production run this with:
+This is will hang when building for production run this with:
 
 ```
 pnpm i
