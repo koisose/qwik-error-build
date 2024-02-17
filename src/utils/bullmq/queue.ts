@@ -4,12 +4,13 @@ import { CONNECTOR, DEFAULT_REMOVE_CONFIG } from "./config";
 import setUpWorker from "./worker";
 import {Redis} from "ioredis";
 let ready=false;
-
+// @ts-ignore
+let myQueue;
 
 // @ts-ignore
 const addJobToQueue = (data) => {
      // @ts-ignore
-  let myQueue;
+
   if(ready){
     // @ts-ignore
     return myQueue.add(data.jobName, data, DEFAULT_REMOVE_CONFIG);
